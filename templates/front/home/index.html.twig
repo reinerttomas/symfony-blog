@@ -4,5 +4,6 @@
 
 {% block body %}
     <h1 class="text-3xl font-bold">Hello {{ controller_name }}!</h1>
+    <p {{ stimulus_controller('hello') }}></p>
     <button class="btn btn-primary">Button</button>
 {% endblock %}

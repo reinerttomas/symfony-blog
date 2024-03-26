@@ -8,6 +8,7 @@
     "format:check": "npx prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
   },
   "devDependencies": {
+    "@hotwired/stimulus": "^3.0.0",
     "@tailwindcss/typography": "^0.5.11",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.9.0",
