@@ -35,3 +35,6 @@ jobs:
 
       - name: Run PHPStan
         run: composer run-script phpstan
+        
+      - name: Run Coding Standard
+        run: composer run-script ccs
