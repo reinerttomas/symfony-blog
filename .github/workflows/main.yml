@@ -38,3 +38,6 @@ jobs:
         
       - name: Run Coding Standard
         run: composer run-script ccs
+        
+      - name: Run Tests
+        run: composer run-script test
