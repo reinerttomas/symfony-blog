@@ -4,12 +4,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "format": "npx prettier --write \"**/*.{ts,tsx,js,md,mdx,css,yaml}\"",
-    "format:check": "npx prettier --check \"**/*.{ts,tsx,js,md,mdx,css,yaml}\""
+    "format": "npx prettier --write \"**/*.{ts,tsx,js,vue,md,mdx,css,yaml}\"",
+    "format:check": "npx prettier --check \"**/*.{ts,tsx,js,vue,md,mdx,css,yaml}\""
   },
   "devDependencies": {
     "@hotwired/stimulus": "^3.0.0",
+    "@symfony/stimulus-bridge": "^3.2.0",
+    "@symfony/ux-vue": "file:vendor/symfony/ux-vue/assets",
     "@tailwindcss/typography": "^0.5.11",
+    "@vitejs/plugin-vue": "^5.0.4",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.9.0",
     "postcss": "^8.4.38",
@@ -17,6 +20,7 @@
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0",
-    "vite-plugin-symfony": "^6.4"
+    "vite-plugin-symfony": "^6.4",
+    "vue": "^3.0"
   }
 }
