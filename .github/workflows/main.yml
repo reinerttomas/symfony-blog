@@ -14,6 +14,12 @@ jobs:
         with:
           php-version: '8.3'
 
+      - name: Setup NodeJs  
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+          cache: 'npm'
+
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
@@ -33,11 +39,17 @@ jobs:
       - name: Install Composer dependencies
         run: composer install -q --no-interaction --no-progress --prefer-dist --optimize-autoloader
 
+      - name: Install NPM dependencies
+        run: npm install -D
+
       - name: Run PHPStan
         run: composer run-script phpstan
-        
+
       - name: Run Coding Standard
         run: composer run-script ccs
-        
+
+      - name: Check formatting with Prettier
+        run: npm run format:check
+
       - name: Run Tests
         run: composer run-script test
